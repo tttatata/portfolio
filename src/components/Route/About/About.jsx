@@ -6,7 +6,9 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Tiêu đề */}
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Giới Thiệu</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Giới Thiệu
+          </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
@@ -23,12 +25,23 @@ const About = () => {
 
           {/* Văn bản bên phải */}
           <div className="fade-in self-start">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Chào mừng đến portfolio của tôi!</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              Chào mừng đến portfolio của tôi!
+            </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Tôi là một Frontend Developer với hơn 3 năm kinh nghiệm chuyên về ReactJS. Tôi đam mê việc tạo ra những ứng dụng web chất lượng cao, dễ sử dụng và có trải nghiệm người dùng tốt.
+              Tôi là một lập trình viên chuyên ngành{" "}
+              <strong>Kỹ thuật phần mềm</strong>, với kinh nghiệm phát triển
+              giao diện web hiện đại bằng <strong>ReactJS</strong>. Tôi đam mê
+              việc xây dựng những sản phẩm số có tính ứng dụng cao, dễ sử dụng
+              và tối ưu trải nghiệm người dùng.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Với nền tảng về Khoa học Máy tính và nhiều dự án thực tế, tôi đã tích lũy được khả năng giải quyết vấn đề và làm việc hiệu quả trong môi trường Agile.
+              Bên cạnh kỹ năng lập trình, tôi còn có nền tảng vững chắc về{" "}
+              <strong>thiết kế đồ họa</strong>, <strong>chụp ảnh</strong> và{" "}
+              <strong>quay dựng video</strong> — những kỹ năng được mài dũa qua
+              các dự án thực tế và chương trình truyền thông. Sự kết hợp giữa
+              công nghệ và sáng tạo giúp tôi biến ý tưởng thành những sản phẩm
+              trực quan, chuyên nghiệp và hiệu quả.
             </p>
 
             {/* Kỹ năng */}
@@ -45,8 +58,6 @@ const About = () => {
                 </div>
               ))}
             </div>
-
-          
           </div>
         </div>
       </div>
