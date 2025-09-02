@@ -31,9 +31,18 @@ const About = () => {
             <p className="text-gray-600 mb-6 leading-relaxed">
               Tôi là một lập trình viên chuyên ngành{" "}
               <strong>Kỹ thuật phần mềm</strong>, với kinh nghiệm phát triển
-              giao diện web hiện đại bằng <strong>ReactJS</strong>. Tôi đam mê
-              việc xây dựng những sản phẩm số có tính ứng dụng cao, dễ sử dụng
-              và tối ưu trải nghiệm người dùng.
+              giao diện web hiện đại bằng <strong>ReactJS</strong> và ứng dụng
+              di động bằng <strong>Flutter</strong>. Tôi đam mê việc xây dựng
+              những sản phẩm số có tính ứng dụng cao, dễ sử dụng và tối ưu trải
+              nghiệm người dùng.
+            </p>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Tôi có khả năng phát triển backend bằng <strong>Node.js</strong>,
+              kết hợp với các hệ quản trị cơ sở dữ liệu như{" "}
+              <strong>MongoDB</strong> và tích hợp các dịch vụ bên thứ ba như{" "}
+              <strong>Firebase</strong> để xây dựng hệ thống linh hoạt, bảo mật
+              và hiệu quả. Sự kết hợp giữa kỹ thuật và tư duy thiết kế giúp tôi
+              tạo ra những giải pháp toàn diện, từ giao diện đến hạ tầng.
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
               Bên cạnh kỹ năng lập trình, tôi còn có nền tảng vững chắc về{" "}
