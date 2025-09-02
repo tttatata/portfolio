@@ -56,10 +56,12 @@ const About = () => {
             {/* Kỹ năng */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                "ReactJS Expert",
-                "Performance",
-                "UI/UX Design",
-                "Team Collaboration",
+                "Flutter Proficiency",
+                "ReactJS Familiarity",
+                "Graphic Design & Photo Editing",
+                "Video Shooting & Editing",
+                "UI/UX Thinking",
+                "Soft Skills & Teamwork",
               ].map((skill, index) => (
                 <div key={index} className="flex items-center">
                   <div className="w-4 h-4 bg-blue-600 rounded-full mr-3"></div>
