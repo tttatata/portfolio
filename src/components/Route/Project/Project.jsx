@@ -14,6 +14,7 @@ import product5kImg from "../../../Assests/imageproject/daibieu.jpg";
 import product6kImg from "../../../Assests/imageproject/chibi.png";
 import product7kImg from "../../../Assests/imageproject/KV_Final.png";
 import product8kImg from "../../../Assests/imageproject/bg.jpg";
+import product9kImg from "../../../Assests/imageproject/edit.jpg";
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -127,25 +128,27 @@ const Projects = () => {
   ];
   const mediaProjects = [
     {
-      id: "videoediting",
-      type: "media",
-      title: "Video Editing Reel",
-      description: "Biên tập video highlight cho sự kiện",
-      intro:
-        "Dự án biên tập video tổng hợp các khoảnh khắc nổi bật trong sự kiện, sử dụng hiệu ứng chuyển cảnh và âm thanh chuyên nghiệp.",
-      image: "URL_ẢNH_5",
-      tags: ["Premiere", "After Effects", "Motion"],
-      tasks: [
-        "Chọn lọc và cắt ghép các đoạn video nổi bật",
-        "Thêm hiệu ứng chuyển cảnh bằng After Effects",
-        "Đồng bộ âm thanh và nhạc nền",
-        "Xuất video chất lượng cao cho nhiều nền tảng",
-      ],
-      gallery: [
-        { src: "URL_ẢNH_CHỤP_1", caption: "Chân dung khách hàng" },
-        { src: "URL_ẢNH_CHỤP_2", caption: "Ảnh sản phẩm mỹ phẩm" },
-      ],
-    },
+  id: "videoediting",
+  type: "media",
+  title: "Quay & Biên Tập Video ",
+  description: "Quay phim và biên tập video highlight cho sự kiện",
+  intro:
+    "Dự án quay và biên tập video tổng hợp các khoảnh khắc nổi bật trong sự kiện, sử dụng hiệu ứng chuyển cảnh, âm thanh và kỹ thuật dựng chuyên nghiệp.",
+  image:  product9kImg,
+  tags: ["Premiere", "Capcut", "Quay phim", "Dựng video"],
+  tasks: [
+    "Ghi hình các phân cảnh trong sự kiện, sản phẩm truyền thông ",
+    "Chọn lọc và cắt ghép các đoạn video nổi bật",
+    "Thêm hiệu ứng, chỉnh sửa video",
+    "Xuất video chất lượng cao cho nhiều nền tảng (YouTube, Facebook, trình chiếu)",
+    "Tối ưu ánh sáng, màu sắc và bố cục hình ảnh trong quá trình hậu kỳ"
+  ],
+  gallery: [
+    { src: "https://www.youtube.com/embed/gMRdD8M2gR8", caption: "Video sự kiện 1", type: "video" },
+    { src: "https://www.youtube.com/embed/plPeTFQFyns", caption: "Video sự kiện 2", type: "video" },
+    { src: "https://www.youtube.com/embed/IKnT34TA5KQ", caption: "Video sự kiện 3", type: "video" }
+  ]
+},
     {
       id: "photography",
       type: "media",
@@ -168,26 +171,26 @@ const Projects = () => {
         {
           src: product1kImg,
           caption:
-            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp",
+            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp", type: "image"
         },
         {
           src: product2kImg,
           caption:
-            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp",
+            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp", type: "image"
         },
         {
           src: product3kImg,
-          caption: "IUH Fashion Show 2023 - ĐHCN TP. Hồ Chí Minh",
+          caption: "IUH Fashion Show 2023 - ĐHCN TP. Hồ Chí Minh", type: "image"
         },
         {
           src: product4kImg,
           caption:
-            "Giới thiệu Đại biểu Đoàn đánh giá Chương trình AUN 2023 - ĐHCN TP. Hồ Chí Minh",
+            "Giới thiệu Đại biểu Đoàn đánh giá Chương trình AUN 2023 - ĐHCN TP. Hồ Chí Minh", type: "image"
         },
         {
           src: product5kImg,
           caption:
-            "Đoàn đánh giá Chương trình AUN 2023 tham quan cơ sở vật chất - ĐHCN TP. Hồ Chí Minh",
+            "Đoàn đánh giá Chương trình AUN 2023 tham quan cơ sở vật chất - ĐHCN TP. Hồ Chí Minh", type: "image"
         },
       ],
     },
