@@ -4,30 +4,36 @@ const ProjectPopup = ({ project, onClose }) => {
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="bg-white rounded-xl shadow-2xl max-w-3xl w-full p-6 relative animate-fade-in">
-        {/* Nút đóng */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
-        >
-          &times;
-        </button>
+   <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+  <div className="relative">
+    {/* Nút đóng nằm kế bên popup */}
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 bg-white text-gray-700 hover:text-red-500 rounded-full w-10 h-10 flex items-center justify-center shadow-lg z-50 transition duration-200"
+        aria-label="Đóng popup"
+      >
+        &times;
+      </button>
 
+      {/* Nội dung popup */}
+      <div className="bg-white rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 relative animate-fade-in">
         {/* Ảnh đại diện */}
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-64 object-cover rounded mb-6"
+          className="w-full max-h-[400px] object-contain rounded mb-6"
         />
 
         {/* Tiêu đề */}
-        <h3 className="text-2xl font-bold text-gray-800 mb-2">{project.title}</h3>
+        <h3 className="text-2xl font-bold text-gray-800 mb-2">
+          {project.title}
+        </h3>
 
         {/* Giới thiệu */}
         {project.intro && (
           <p className="text-gray-700 mb-4">
-            <span className="font-semibold text-gray-800">Giới thiệu dự án:</span> {project.intro}
+            <span className="font-semibold text-gray-800">Giới thiệu dự án:</span>{" "}
+            {project.intro}
           </p>
         )}
 
@@ -37,7 +43,10 @@ const ProjectPopup = ({ project, onClose }) => {
         {/* Công nghệ */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags?.map((tag, i) => (
-            <span key={i} className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">
+            <span
+              key={i}
+              className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm"
+            >
               {tag}
             </span>
           ))}
@@ -46,7 +55,9 @@ const ProjectPopup = ({ project, onClose }) => {
         {/* Nhiệm vụ */}
         {project.tasks && (
           <div className="mt-4">
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">Nhiệm vụ đã thực hiện:</h4>
+            <h4 className="text-lg font-semibold text-gray-800 mb-2">
+              Nhiệm vụ đã thực hiện:
+            </h4>
             <ul className="list-disc list-inside text-gray-600 space-y-1">
               {project.tasks.map((task, index) => (
                 <li key={index}>{task}</li>
@@ -65,7 +76,7 @@ const ProjectPopup = ({ project, onClose }) => {
                   <img
                     src={item.src}
                     alt={`Media ${index + 1}`}
-                    className="w-full h-40 object-cover rounded shadow mb-2"
+                    className="w-full max-h-[250px] object-contain rounded shadow mb-2"
                   />
                   <p className="text-sm text-gray-600 text-center">{item.caption}</p>
                 </div>
@@ -83,7 +94,7 @@ const ProjectPopup = ({ project, onClose }) => {
                   <img
                     src={item.src}
                     alt={`Thiết kế ${index + 1}`}
-                    className="w-full h-40 object-cover rounded shadow mb-2"
+                    className="w-full max-h-[250px] object-contain rounded shadow mb-2"
                   />
                   <p className="text-sm text-gray-600 text-center">{item.caption}</p>
                 </div>
@@ -106,19 +117,30 @@ const ProjectPopup = ({ project, onClose }) => {
                   🌐 Website demo
                 </a>
               )}
-              {project.github && (
+              {project.github?.web && (
                 <a
-                  href={project.github}
+                  href={project.github.web}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
                 >
-                  💻 Mã nguồn GitHub
+                  💻 Mã nguồn Web
+                </a>
+              )}
+              {project.github?.mobile && (
+                <a
+                  href={project.github.mobile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  📱 Mã nguồn Mobile
                 </a>
               )}
             </div>
           </div>
         )}
+      </div>
       </div>
     </div>
   );
