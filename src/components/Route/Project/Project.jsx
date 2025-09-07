@@ -15,6 +15,9 @@ import product6kImg from "../../../Assests/imageproject/chibi.png";
 import product7kImg from "../../../Assests/imageproject/KV_Final.png";
 import product8kImg from "../../../Assests/imageproject/bg.jpg";
 import product9kImg from "../../../Assests/imageproject/edit.jpg";
+import product10kImg from "../../../Assests/imageproject/BANHTT.jpg";
+import product11kImg from "../../../Assests/imageproject/si1.JPG";
+import product12kImg from "../../../Assests/imageproject/si2.JPG";
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -85,7 +88,7 @@ const Projects = () => {
     {
       id: "branding",
       type: "design",
-     title: "Design Editing & Print Production",
+      title: "Design Editing & Print Production",
       description: "Thiết kế, chỉnh sửa file và in sản phẩm",
       intro:
         "Thiết kế chỉnh sửa và tạo các sản phẩm đồ họa phục vụ truyền thông và in ấn.",
@@ -128,27 +131,39 @@ const Projects = () => {
   ];
   const mediaProjects = [
     {
-  id: "videoediting",
-  type: "media",
-  title: "Quay & Biên Tập Video ",
-  description: "Quay phim và biên tập video highlight cho sự kiện",
-  intro:
-    "Dự án quay và biên tập video tổng hợp các khoảnh khắc nổi bật trong sự kiện, sử dụng hiệu ứng chuyển cảnh, âm thanh và kỹ thuật dựng chuyên nghiệp.",
-  image:  product9kImg,
-  tags: ["Premiere", "Capcut", "Quay phim", "Dựng video"],
-  tasks: [
-    "Ghi hình các phân cảnh trong sự kiện, sản phẩm truyền thông ",
-    "Chọn lọc và cắt ghép các đoạn video nổi bật",
-    "Thêm hiệu ứng, chỉnh sửa video",
-    "Xuất video chất lượng cao cho nhiều nền tảng (YouTube, Facebook, trình chiếu)",
-    "Tối ưu ánh sáng, màu sắc và bố cục hình ảnh trong quá trình hậu kỳ"
-  ],
-  gallery: [
-    { src: "https://www.youtube.com/embed/gMRdD8M2gR8", caption: "Video sự kiện 1", type: "video" },
-    { src: "https://www.youtube.com/embed/plPeTFQFyns", caption: "Video sự kiện 2", type: "video" },
-    { src: "https://www.youtube.com/embed/IKnT34TA5KQ", caption: "Video sự kiện 3", type: "video" }
-  ]
-},
+      id: "videoediting",
+      type: "media",
+      title: "Quay & Biên Tập Video ",
+      description: "Quay phim và biên tập video highlight cho sự kiện",
+      intro:
+        "Dự án quay và biên tập video tổng hợp các khoảnh khắc nổi bật trong sự kiện, sử dụng hiệu ứng chuyển cảnh, âm thanh và kỹ thuật dựng chuyên nghiệp.",
+      image: product9kImg,
+      tags: ["Premiere", "Capcut", "Quay phim", "Dựng video"],
+      tasks: [
+        "Ghi hình các phân cảnh trong sự kiện, sản phẩm truyền thông ",
+        "Chọn lọc và cắt ghép các đoạn video nổi bật",
+        "Thêm hiệu ứng, chỉnh sửa video",
+        "Xuất video chất lượng cao cho nhiều nền tảng (YouTube, Facebook, trình chiếu)",
+        "Tối ưu ánh sáng, màu sắc và bố cục hình ảnh trong quá trình hậu kỳ",
+      ],
+      gallery: [
+        {
+          src: "https://www.youtube.com/embed/gMRdD8M2gR8",
+          caption: "Video sự kiện 1",
+          type: "video",
+        },
+        {
+          src: "https://www.youtube.com/embed/plPeTFQFyns",
+          caption: "Video sự kiện 2",
+          type: "video",
+        },
+        {
+          src: "https://www.youtube.com/embed/IKnT34TA5KQ",
+          caption: "Video sự kiện 3",
+          type: "video",
+        },
+      ],
+    },
     {
       id: "photography",
       type: "media",
@@ -171,26 +186,49 @@ const Projects = () => {
         {
           src: product1kImg,
           caption:
-            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp", type: "image"
+            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp",
+          type: "image",
         },
         {
           src: product2kImg,
           caption:
-            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp", type: "image"
+            "Kỷ niệm 80 năm thành lập nước Cộng hòa Xã hội Chủ nghĩa Việt Nam 2/9/1945 – Đông Tháp",
+          type: "image",
         },
         {
           src: product3kImg,
-          caption: "IUH Fashion Show 2023 - ĐHCN TP. Hồ Chí Minh", type: "image"
+          caption: "IUH Fashion Show 2023 - ĐHCN TP. Hồ Chí Minh",
+          type: "image",
         },
         {
           src: product4kImg,
           caption:
-            "Giới thiệu Đại biểu Đoàn đánh giá Chương trình AUN 2023 - ĐHCN TP. Hồ Chí Minh", type: "image"
+            "Đoàn đánh giá Chương trình AUN 2023 tham quan cơ sở vật chất - ĐHCN TP. Hồ Chí Minh",
+          type: "image",
         },
         {
           src: product5kImg,
           caption:
-            "Đoàn đánh giá Chương trình AUN 2023 tham quan cơ sở vật chất - ĐHCN TP. Hồ Chí Minh", type: "image"
+            "Giới thiệu Đại biểu Đoàn đánh giá Chương trình AUN 2023 - ĐHCN TP. Hồ Chí Minh",
+          type: "image",
+        },
+        {
+          src: product10kImg,
+          caption:
+            "Concept chụp sản phẩm bánh Trung Thu – Tự lên ý tưởng",
+          type: "image",
+        },
+        {
+          src: product11kImg,
+          caption:
+            "Chụp áo dài truyền thống trong đình chùa",
+          type: "image",
+        },
+        {
+          src: product12kImg,
+          caption:
+            "Chụp áo dài truyền thống trong đình chùa",
+          type: "image",
         },
       ],
     },
