@@ -56,7 +56,7 @@ const photoProjects = [
     year: "2023",
 
     image: product8kImg,
-    link: "https://photos.app.goo.gl/Me2MvPVQS8iE3WAJ6",
+    link: "https://photos.app.goo.gl/svc5yGk6pHt5Mv748",
   },
   {
     title: "Team building Trung Tâm TT và TT - IUH ",
