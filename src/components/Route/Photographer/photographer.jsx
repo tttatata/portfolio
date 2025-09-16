@@ -74,20 +74,20 @@ const videoProjects = [
     description: [
       "Dự án video behind the scene khai giảng IUH 2023, phụ trách quay, dựng bằng Primiere Pro",
     ],
-    videoUrl: "https://www.youtube.com/embed/gMRdD8M2gR8",
+    videoUrl: "https://www.youtube.com/embed/plPeTFQFyns",
   },
   {
     title: "Short Film 'khoảng khắc TSMT 2023'",
     year: "2023",
     description:
       "Dự án video ngắn khoảng khắc TSMT 2023, phụ trách quay, dựng bằng Catcup ",
-    videoUrl: "https://www.youtube.com/embed/plPeTFQFyns",
+    videoUrl: "https://www.youtube.com/embed/gMRdD8M2gR8",
   },
   {
-    title: "Short Film 'khoảng khắc phụ huynh TSMT 2023'",
+    title: "Short Film 'khoảng khắc visual tân SV 2023'",
     year: "2023",
     description:
-      "Dự án video ngắn khoảng khắc TSMT 2023, phụ trách quay, dựng cùng team bằng Catcup ",
+      "Dự án video ngắn khoảng khắc visual tân SV 2023, phụ trách quay, dựng cùng team bằng Catcup ",
     videoUrl: "https://www.youtube.com/embed/IKnT34TA5KQ",
   },
   ,
