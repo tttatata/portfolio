@@ -63,7 +63,7 @@ const photoProjects = [
     year: "2023",
 
     image: product8kImg,
-    link: "https://photos.app.goo.gl/Ns9uCezsLcM3qReL9",
+    link: "https://photos.app.goo.gl/qjnsvcX84KRmDv3v5",
   },
 ];
 
