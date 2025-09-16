@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ProjectPopup = ({ project, onClose }) => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   if (!project) return null;
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="relative">
-        {/* Nút đóng nằm kế bên popup */}
+        {/* Nút đóng popup */}
         <button
           onClick={onClose}
           className="absolute top-6 right-6 bg-white text-gray-700 hover:text-red-500 rounded-full w-10 h-10 flex items-center justify-center shadow-lg z-50 transition duration-200"
@@ -21,20 +23,17 @@ const ProjectPopup = ({ project, onClose }) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full max-h-[400px] object-contain rounded mb-6"
+            className="w-full max-h-[400px] object-contain rounded mb-6 cursor-pointer"
+            onClick={() => setSelectedImage(project.image)}
           />
 
           {/* Tiêu đề */}
-          <h3 className="text-2xl font-bold text-gray-800 mb-2">
-            {project.title}
-          </h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">{project.title}</h3>
 
           {/* Giới thiệu */}
           {project.intro && (
             <p className="text-gray-700 mb-4">
-              <span className="font-semibold text-gray-800">
-                Giới thiệu dự án:
-              </span>{" "}
+              <span className="font-semibold text-gray-800">Giới thiệu dự án:</span>{" "}
               {project.intro}
             </p>
           )}
@@ -57,9 +56,7 @@ const ProjectPopup = ({ project, onClose }) => {
           {/* Nhiệm vụ */}
           {project.tasks && (
             <div className="mt-4">
-              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                Nhiệm vụ đã thực hiện:
-              </h4>
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">Nhiệm vụ đã thực hiện:</h4>
               <ul className="list-disc list-inside text-gray-600 space-y-1">
                 {project.tasks.map((task, index) => (
                   <li key={index}>{task}</li>
@@ -68,72 +65,65 @@ const ProjectPopup = ({ project, onClose }) => {
             </div>
           )}
 
-         {project.type === "media" && project.gallery && (
-  <div className="mt-6">
-    <h4 className="text-lg font-semibold text-gray-800 mb-2">
-      Ảnh / Video dự án:
-    </h4>
-    <div className="grid grid-cols-2 gap-4">
-      {project.gallery.map((item, index) => (
-        <div key={index}>
-          {item.type === "video" ? (
-            <div className="aspect-video w-full rounded overflow-hidden shadow mb-2">
-              <iframe
-                src={item.src.replace("youtu.be/", "www.youtube.com/embed/")}
-                title={`Video ${index + 1}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-              <p className="text-sm text-gray-600 text-center">
-                {item.caption}
-              </p>
-            </div>
-          ) : (
-            <>
-              <img
-                src={item.src}
-                alt={`Media ${index + 1}`}
-                className="w-full max-h-[250px] object-contain rounded shadow mb-2"
-              />
-              <p className="text-sm text-gray-600 text-center">
-                {item.caption}
-              </p>
-            </>
-          )}
-        </div>
-      ))}
-    </div>
-  </div>
-)}
-
-          {project.type === "design" && project.gallery && (
+          {/* Media */}
+          {project.type === "media" && project.gallery && (
             <div className="mt-6">
-              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                File thiết kế:
-              </h4>
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">Ảnh / Video dự án:</h4>
               <div className="grid grid-cols-2 gap-4">
                 {project.gallery.map((item, index) => (
                   <div key={index}>
-                    <img
-                      src={item.src}
-                      alt={`Thiết kế ${index + 1}`}
-                      className="w-full max-h-[250px] object-contain rounded shadow mb-2"
-                    />
-                    <p className="text-sm text-gray-600 text-center">
-                      {item.caption}
-                    </p>
+                    {item.type === "video" ? (
+                      <div className="aspect-video w-full rounded overflow-hidden shadow mb-2">
+                        <iframe
+                          src={item.src.replace("youtu.be/", "www.youtube.com/embed/")}
+                          title={`Video ${index + 1}`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
+                        <p className="text-sm text-gray-600 text-center">{item.caption}</p>
+                      </div>
+                    ) : (
+                      <>
+                        <img
+                          src={item.src}
+                          alt={`Media ${index + 1}`}
+                          className="w-full max-h-[250px] object-contain rounded shadow mb-2 cursor-pointer"
+                          onClick={() => setSelectedImage(item.src)}
+                        />
+                        <p className="text-sm text-gray-600 text-center">{item.caption}</p>
+                      </>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
           )}
 
+          {/* Design */}
+          {project.type === "design" && project.gallery && (
+            <div className="mt-6">
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">File thiết kế:</h4>
+              <div className="grid grid-cols-2 gap-4">
+                {project.gallery.map((item, index) => (
+                  <div key={index}>
+                    <img
+                      src={item.src}
+                      alt={`Thiết kế ${index + 1}`}
+                      className="w-full max-h-[250px] object-contain rounded shadow mb-2 cursor-pointer"
+                      onClick={() => setSelectedImage(item.src)}
+                    />
+                    <p className="text-sm text-gray-600 text-center">{item.caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Development */}
           {project.type === "development" && (
             <div className="mt-6">
-              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                Liên kết dự án:
-              </h4>
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">Liên kết dự án:</h4>
               <div className="flex flex-col gap-2">
                 {project.demo && (
                   <a
@@ -170,6 +160,20 @@ const ProjectPopup = ({ project, onClose }) => {
           )}
         </div>
       </div>
+
+      {/* Modal zoom ảnh */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[999]"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Zoom"
+            className="max-w-full max-h-full rounded-lg shadow-xl"
+          />
+        </div>
+      )}
     </div>
   );
 };

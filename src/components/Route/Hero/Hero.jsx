@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import avatar from "../../../Assests/avatar.jpg"; // hoặc dùng ảnh từ public
 
 const Hero = () => {
-  const fullText = "Software Development, Design & Media Production ";
+  const fullText = " Photographer, Design & Software Development ";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
@@ -42,8 +42,7 @@ const Hero = () => {
               <span className="text-blue-400 animate-blink">|</span>
             </div>
             <p className="text-lg md:text-xl mb-8">
-              Tôi tạo ra những trải nghiệm web hiện đại với React.js, Material-UI và Flutter, kết hợp backend bằng Node.js để xây dựng hệ thống linh hoạt và hiệu quả. Ngoài lập trình, tôi còn có kỹ năng chụp ảnh, chỉnh sửa video, và thiết kế đồ họa chuyên nghiệp với Photoshop và Illustrator — giúp tôi biến ý tưởng thành những sản phẩm kỹ thuật số đẹp mắt, sáng tạo và tối ưu trải nghiệm người dùng.
-            </p>
+              Tôi là một kỹ sư phần mềm đang theo đuổi sự nghiệp sáng tạo trong lĩnh vực hình ảnh và thiết kế. Với nền tảng công nghệ vững chắc, tôi kết hợp tư duy kỹ thuật với cảm quan nghệ thuật để xây dựng các sản phẩm số hiện đại, trực quan và truyền cảm. Từ lập trình web đến nhiếp ảnh và thiết kế đồ họa, tôi luôn hướng đến việc tạo ra những trải nghiệm đẹp mắt, tinh tế và có chiều sâu.        </p>
             <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4">
               <a
                 href="#projects"

@@ -18,8 +18,18 @@ import product9kImg from "../../../Assests/imageproject/edit.jpg";
 import product10kImg from "../../../Assests/imageproject/BANHTT.jpg";
 import product11kImg from "../../../Assests/imageproject/si1.JPG";
 import product12kImg from "../../../Assests/imageproject/si2.JPG";
+import product13kImg from "../../../Assests/imageproject/KV_Final.png";
+import product14kImg from "../../../Assests/imageproject/a.jpg";
+import product15kImg from "../../../Assests/imageproject/b.jpg";
+import product16kImg from "../../../Assests/imageproject/c.jpg";
+import product17kImg from "../../../Assests/imageproject/0612 - STANDEE.jpg";
+import product18kImg from "../../../Assests/imageproject/n.png";
+import product19kImg from "../../../Assests/imageproject/bn1.png";
+import product20kImg from "../../../Assests/imageproject/bn2.png";
+import product21kImg from "../../../Assests/imageproject/bn3.PNG";
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+const [selectedImage, setSelectedImage] = useState(null);
 
   const appProjects = [
     {
@@ -102,7 +112,7 @@ const Projects = () => {
         "Kiểm tra bản in thử và tinh chỉnh chi tiết để đảm bảo chất lượng đầu ra",
       ],
       gallery: [
-        { src: product7kImg, caption: "Background chương trình" },
+        { src: product17kImg , caption: "Standee chương trình" },
         { src: product8kImg, caption: "Background chương trình" },
       ],
     },
@@ -125,9 +135,113 @@ const Projects = () => {
         {
           src: product6kImg,
           caption: "Nhân vật chibi nam, nữ đại diện sinh viên IUH",
+        },{
+          src: product14kImg,
+          caption: "Frame avatar cho sinh viên IUH",
         },
       ],
     },
+    {
+      id: "branding",
+      type: "design",
+      title: "Hội thao IUH 2023",
+      description: "Thiết kế lịch thi đấu và khung tỉ số cho trang social media",
+      intro:
+        "Thiết kế xây dựng ấn phẩm truyền thông cho hội thao.",
+      image: product15kImg,
+      tags: ["Illustrator", "Photoshop", ],
+      tasks: [
+        "Chỉnh sửa ảnh bằng Photoshop để đồng bộ phong cách",
+        "Thiết kế backdrop chương trình",
+        "Phối hợp màu sắc, font chữ cho phù hợp",
+        "Xuất file thiết kế phục vụ in ấn và truyền thông online",
+      ],
+      gallery: [
+        {
+          src: product15kImg,
+          caption: "Bảng thi đấu vòng loại bộ môn bóng đá",
+        },
+         {
+          src: product16kImg,
+          caption: "Khung tỉ số cho bộ môn bóng chuyền",
+        },
+      ],
+    },
+    {
+      id: "branding",
+      type: "design",
+      title: "Background Event Design",
+      description: "Thiết kế, chỉnh sửa file và in sản phẩm",
+      intro:
+        "Thiết kế backdrop chương trình, in sản phẩm .",
+      image: product13kImg,
+      tags: ["Illustrator", "Photoshop"],
+      tasks: [
+        "Chỉnh sửa file bằng Photoshop để đồng bộ phong cách",
+        "Thiết kế backdrop chương trình",
+        "Phối hợp màu sắc, font chữ cho phù hợp",
+        "Xuất file thiết kế phục vụ in ấn và truyền thông online",
+      ],
+      gallery: [
+        {
+          src: product13kImg,
+          caption: "Background chương trình",
+        },
+      ],
+    },
+     {
+      id: "branding",
+      type: "design",
+      title: "Background Event Design",
+      description: "Thiết kế, chỉnh sửa file và in sản phẩm",
+      intro:
+        "Thiết kế backdrop chương trình, in sản phẩm  .",
+      image: product18kImg ,
+      tags: ["Illustrator", "Photoshop"],
+      tasks: [
+        "Chỉnh sửa file bằng Photoshop để đồng bộ phong cách",
+        "Thiết kế backdrop chương trình",
+        "Phối hợp màu sắc, font chữ cho phù hợp",
+        "Xuất file thiết kế phục vụ in ấn và truyền thông online",
+      ],
+      gallery: [
+        {
+          src: product18kImg ,
+          caption: "Background chương trình",
+        },
+      ],
+    },
+     {
+      id: "branding",
+      type: "design",
+      title: "Background Event Design",
+      description: "Thiết kế, chỉnh sửa file và in sản phẩm",
+      intro:
+        "Thiết kế backdrop chương trình, in sản phẩm  .",
+      image: product19kImg ,
+      tags: ["Illustrator", "Photoshop"],
+      tasks: [
+        "Chỉnh sửa file bằng Photoshop để đồng bộ phong cách",
+        "Thiết kế backdrop chương trình",
+        "Phối hợp màu sắc, font chữ cho phù hợp",
+        "Xuất file thiết kế phục vụ in ấn và truyền thông online",
+      ],
+      gallery: [
+        {
+          src: product19kImg ,
+          caption: "Background chương trình",
+        },
+        {
+          src: product20kImg ,
+          caption: "Background chương trình",
+        },
+        {
+          src: product21kImg ,
+          caption: "Poster chương trình",
+        },
+      ],
+    },
+    
   ];
   const mediaProjects = [
     {
@@ -243,11 +357,25 @@ const Projects = () => {
             key={index}
             className="bg-white rounded-xl shadow-lg overflow-hidden"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover"
-            />
+          <img
+  src={project.image}
+  alt={project.title}
+  className="w-full h-48 object-cover cursor-pointer"
+  onClick={() => setSelectedImage(project.image)}
+/>{selectedImage && (
+  <div
+    className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img
+      src={selectedImage}
+      alt="Preview"
+      className="max-w-full max-h-full rounded-lg shadow-lg"
+    />
+  </div>
+)}
+
+
             <div className="p-6">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">
                 {project.title}
@@ -274,12 +402,13 @@ const Projects = () => {
         ))}
       </div>
     </div>
+    
   );
 
   return (
     <section id="projects" className="py-20 bg-gray-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Dự Án Đã Tham Gia
           </h2>
@@ -288,12 +417,13 @@ const Projects = () => {
             media
           </p>
           <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-        </div>
+        </div> */}
 
         {/* Các nhóm dự án */}
+          {renderSection("Thiết kế", designProjects)}
         {renderSection("Phát triển ứng dụng", appProjects)}
-        {renderSection("Thiết kế", designProjects)}
-        {renderSection("Media", mediaProjects)}
+      
+        {/* {renderSection("Media", mediaProjects)} */}
 
         <div className="text-center mt-12">
           <a

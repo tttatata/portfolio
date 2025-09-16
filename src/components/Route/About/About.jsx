@@ -29,30 +29,22 @@ const About = () => {
               Chào mừng đến portfolio của tôi!
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Tôi là một lập trình viên chuyên ngành{" "}
-              <strong>Kỹ thuật phần mềm</strong>, với kinh nghiệm phát triển
-              giao diện web hiện đại bằng <strong>ReactJS</strong> và ứng dụng
-              di động bằng <strong>Flutter</strong>. Tôi đam mê việc xây dựng
-              những sản phẩm số có tính ứng dụng cao, dễ sử dụng và tối ưu trải
-              nghiệm người dùng.
+              Tôi là Thương, một người làm việc trong lĩnh vực sáng tạo với chuyên môn trải dài ở ba mảng: {" "}
+              <strong>nhiếp ảnh, thiết kế đồ họa và phát triển phần mềm.</strong>, 
             </p>
+      
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Tôi có khả năng phát triển backend bằng <strong>Node.js</strong>,
-              kết hợp với các hệ quản trị cơ sở dữ liệu như{" "}
-              <strong>MongoDB</strong> và tích hợp các dịch vụ bên thứ ba như{" "}
-              <strong>Firebase</strong> để xây dựng hệ thống linh hoạt, bảo mật
-              và hiệu quả. Sự kết hợp giữa kỹ thuật và tư duy thiết kế giúp tôi
-              tạo ra những giải pháp toàn diện, từ giao diện đến hạ tầng.
+             Với nền tảng{" "}
+              <strong>nhiếp ảnh</strong>, tôi tập trung khai thác chiều sâu cảm xúc và bố cục ánh sáng để truyền tải câu chuyện một cách trực quan và chân thực. Mỗi khung hình là một nỗ lực ghi lại bản chất của khoảnh khắc, đồng thời phản ánh góc nhìn cá nhân về thế giới xung quanh.
             </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Bên cạnh kỹ năng lập trình, tôi còn có nền tảng vững chắc về{" "}
-              <strong>thiết kế đồ họa</strong>, <strong>chụp ảnh</strong> và{" "}
-              <strong>quay dựng video</strong> — những kỹ năng được mài dũa qua
-              các dự án thực tế và chương trình truyền thông. Sự kết hợp giữa
-              công nghệ và sáng tạo giúp tôi biến ý tưởng thành những sản phẩm
-              trực quan, chuyên nghiệp và hiệu quả.
-            </p>
-
+     <p className="text-gray-600 mb-8 leading-relaxed">
+             Trong {" "}
+              <strong>thiết kế</strong>, tôi theo đuổi tư duy hệ thống và tính thẩm mỹ tối giản. Tôi tin rằng một sản phẩm thiết kế hiệu quả không chỉ đẹp mà còn phải có chức năng rõ ràng, phục vụ đúng nhu cầu người dùng và phù hợp với mục tiêu thương hiệu.   </p>
+    <p className="text-gray-600 mb-8 leading-relaxed">
+             Là một {" "}
+              <strong>lập trình viên</strong>, tôi có kinh nghiệm xây dựng các giải pháp số từ giao diện người dùng đến hệ thống backend. Tôi chú trọng vào hiệu năng, khả năng mở rộng và trải nghiệm người dùng, đồng thời luôn cập nhật công nghệ mới để tối ưu quy trình phát triển. </p>
+               <p className="text-gray-600 mb-8 leading-relaxed">
+            Tôi hướng đến việc kết nối giữa nghệ thuật và công nghệ, tạo ra những sản phẩm vừa có chiều sâu sáng tạo, vừa có giá trị ứng dụng cao. Portfolio này là tổng hợp những dự án tôi đã thực hiện, phản ánh năng lực và định hướng nghề nghiệp của tôi.      </p>
             {/* Kỹ năng */}
             <div className="grid grid-cols-2 gap-4">
               {[
