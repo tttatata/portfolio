@@ -55,15 +55,15 @@ const photoProjects = [
     title: "IUH Fashion Show 2023 - IUH",
     year: "2023",
 
-    image: product8kImg,
+    image:product3kImg ,
     link: "https://photos.app.goo.gl/svc5yGk6pHt5Mv748",
   },
   {
     title: "Team building Trung Tâm TT và TT - IUH ",
     year: "2023",
 
-    image: product3kImg,
-    link: "https://photos.app.goo.gl/Me2MvPVQS8iE3WAJ6",
+    image: product8kImg,
+    link: "https://photos.app.goo.gl/Ns9uCezsLcM3qReL9",
   },
 ];
 
