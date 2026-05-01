@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProjectPopup from "../../Layout/Popup";
 
 // Import hình ảnh dự án
+import PhotoboothImg from "../../../Assests/screen/photobooth.png";
 import PharmacyImg from "../../../Assests/screen/phamacyapp.png";
 import ChatappImg from "../../../Assests/screen/chatapp.png";
 import SmartparkImg from "../../../Assests/screen/imagesmp.png";
@@ -53,6 +54,24 @@ const [selectedImage, setSelectedImage] = useState(null);
       github: {
         web: "https://github.com/SirenFong/KLTN-Ecommerce",
         mobile: "https://github.com/tttatata/app_mobi_pharmacy",
+      },
+    },
+    {
+      id: "photobooth",
+      type: "development",
+      title: "Photobooth App",
+      description: "Ứng dụng chụp ảnh tự động với hiệu ứng đặc biệt",
+      intro:
+        "Dự án xây dựng hệ thống chụp ảnh tự động cho sự kiện, tích hợp hiệu ứng đặc biệt và chia sẻ nhanh chóng trên mạng xã hội.",
+      image: PhotoboothImg,
+      tags: ["React", "Node.js"],
+      tasks: [
+        "Thiết kế giao diện người dùng đơn giản và thân thiện cho ứng dụng photobooth",
+      ],
+      demo: "https://photobooth-sigma-eight.vercel.app/",
+      github: {
+        web: "https://github.com/tttatata/photobooth",
+       
       },
     },
     {
